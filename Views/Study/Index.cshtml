@@ -4,7 +4,7 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
-<script language="javascript" type="text/javascript" src="~/js/Script/Study/Study.js"></script>
+<script language="javascript" type="text/javascript" src="~/js/ScriptStudy.js"></script>
 
 <!-- begin :: Content Header -->
 <div class="container">
@@ -12,6 +12,9 @@
         <div class="col-lg-12">
             <div class="page-header">
                 <h1 class="text-warning mt-4" style="text-align:center">Study</h1>
+            </div>
+            <div>
+                <div class="col-sm-12"><a class="btn btn-primary" onclick="createNewData()">Add</a></div>
             </div>
             <!-- begin :: Datatable -->
             <div class="bs-component">
@@ -32,6 +35,75 @@
                 </div>
             </div>
             <!-- end :: Datatable -->
+            <!-- begin :: Modal -->
+            <div class="modal fade" id="createStudy">
+                <div class="modal-dialog" style="position: absolute; float: left; left:30%; top: 30%;transform: translate(-20%, -20%);">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Create New Data</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label>Study ID</label>
+                                </div>
+                                <div class="col" width="100px">
+                                    <input id="txtID" type="hidden" name="txtStudyID"/>
+                                    <input id="txtStudyID" type="text" name="txtStudyID" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label>Version ID</label>
+                                </div>
+                                <div class="col">
+                                    <input id="txtVersionID" type="text" name="txtVersionID" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label>Protocol Title</label>
+                                </div>
+                                <div class="col">
+                                    <input id="txtProtocolTitle" type="text" name="txtProtocolTitle" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label>Protocol Code</label>
+                                </div>
+                                <div class="col">
+                                    <input id="txtProtocolCode" type="text" name="txtProtocolCode" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label>MoleculesID</label>
+                                </div>
+                                <div class="col">
+                                    <input id="txtMoleculeID" type="text" name="txtMoleculeID" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label>Status Study ID</label>
+                                </div>
+                                <div class="col">
+                                    <input id="txtStatusStudyID" type="text" name="txtStatusStudyID" class="form-control" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="btnSaveModal()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end :: Modal -->
         </div>
     </div>
 </div>
